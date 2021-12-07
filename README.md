@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/71601985/145070927-3d9b1492-358d-4610-
 - 변환 코드로 (X°, Y°) 각도 쌍 예측
 - 시리얼 통신을 통해 레이저건 아두이노 보드로 전송
 - 2축 레이저건을 가로축으로 X°, 세로축으로 Y°만큼 움직여 움직인 물체 사격
-- (사격하는 모습은 위 **'구동 테스트 영상'** 에서 볼 수 있음)
+- (사격하는 모습은 위 <a href="https://github.com/Daeun-Danna-Lee/arduino-squid-game/blob/main/README.md#%EA%B5%AC%EB%8F%99-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%98%81%EC%83%81">'구동 테스트 영상'</a>에서 볼 수 있음)
 
 
 

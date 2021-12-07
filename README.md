@@ -9,3 +9,43 @@
 ## 구동 테스트 영상  
 https://user-images.githubusercontent.com/71601985/144843485-3b44ed56-78ea-4a30-9f1c-9227c498082c.mp4
 
+<br/>
+
+## 영희 인형 - 3D 모델링 & 프린팅, 아두이노
+- 영희 인형 모델을 오픈소스로 구해, 인형의 몸통을 반으로 가르고 안쪽에 모터가 들어갈 자리를 만드는 모델링 작업 진행  
+
+![image](https://user-images.githubusercontent.com/71601985/145066728-652f8b7a-2cd3-4df1-8cb6-2f4e9a41c8a7.png)
+![image](https://user-images.githubusercontent.com/71601985/145067368-6709dfe9-adf8-41f5-9bba-2d08951dbad5.png)
+![image](https://user-images.githubusercontent.com/71601985/145076129-dbae536c-c9b8-4e87-991d-3d90269f7703.png)
+![image](https://user-images.githubusercontent.com/71601985/145076170-bf2dd3fc-2518-480a-a3d8-337f5522a0df.png)
+![image](https://user-images.githubusercontent.com/71601985/145076191-76d26813-c4a2-4b99-970f-94c1fda7498e.png)
+
+- 몸 속 넓게 뚫은 공간에 서보모터를 설치하고 긴 봉으로 모터와 영희 인형의 목을 연결, 모터가 목을 돌릴 수 있게 설계
+
+
+
+<br/>
+
+## Utils - 2D 좌표 -> 3D 각도 변환
+CV로 인식한 물체 움직임(2D 좌표 - x, y)을 2축 모터 레이저건의 타겟점(3D 각도 - X°, Y°)으로 변환하는 코드 작성
+
+(아래는 물체 움직임 인식)
+
+https://user-images.githubusercontent.com/71601985/145070927-3d9b1492-358d-4610-8f49-bf7e5f65d542.mp4
+
+- (x, y, X), (x, y, Y) 벡터로 사상해 충분한 양의 (x, y, X)와 (x, y, Y) 입력값이 들어왔을 경우, (x, y) 쌍으로 X°, Y° 값 예측
+<br/>
+
+**[작동 알고리즘]**  
+- 젯슨나노에 장착된 카메라가 물체가 움직인 위치를 탐지해 (x, y) 좌표쌍을 계산
+- 변환 코드로 (X°, Y°) 각도 쌍 예측
+- 시리얼 통신을 통해 레이저건 아두이노 보드로 전송
+- 2축 레이저건을 가로축으로 X°, 세로축으로 Y°만큼 움직여 움직인 물체 사격
+
+
+<br/>
+
+## 플레이어 모듈 - 레이저 프린팅, 아두이노
+- 360도 회전 서보 모터 활용해 플레이어 RC카 제작
+- 합판을 레이저 프린터로 절단해 외형 완성
+- 블루투스 모듈을 활용한 조종
